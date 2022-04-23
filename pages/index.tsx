@@ -1,12 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
+import { RNComponent } from "rn/RNComponent";
 import DOMComponent from 'web/DOMComponent'
 
 export default function App(props) {
   return (
     <View style={styles.container}>
-      <Text className="pb-4 font-bold">RN</Text>
-      <div className='font-bold'>Hi</div>
+      <Text className="pb-4 font-bold">RN Text</Text>
+      <div className='font-bold'>div</div>
       <DOMComponent />
+      <RNComponent className="font-bold" />
     </View>
   )
 }

@@ -7,7 +7,6 @@ module.exports = {
       {
         platform: "web",
         allowModules: ["react-native", "rn/*"],
-        blockModules: ["web/**/*"],
       }
     ],
   ],

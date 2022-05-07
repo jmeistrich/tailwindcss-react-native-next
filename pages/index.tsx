@@ -1,13 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { useEffect, useState } from 'react';
+import { Animated, StyleSheet, Text, View } from 'react-native'
 import { TailwindProvider, styled } from 'tailwindcss-react-native';
 
-const StyledText = styled(Text);
+const StyledView = styled(Animated.View);
+const StyledText = styled(Animated.Text);
 
 export default function App(props) {
   return (
-    <TailwindProvider platform="web">
+    <TailwindProvider platform="web" preview>
       <View style={styles.container}>
-        <StyledText className="pb-4 font-bold">RN Text</StyledText>
+        <StyledView
+          className="p-4 mt-4 bg-gray-800 rounded-lg"
+          style={{ width: 100, backgroundColor: 'blue' }}
+        >
+          <StyledText className="font-bold text-white">
+            React Native component
+          </StyledText>
+        </StyledView>
       </View>
     </TailwindProvider>
   );

@@ -6,7 +6,7 @@ module.exports = {
       "tailwindcss-react-native/babel",
       {
         platform: "web",
-        allowModules: ["react-native", "rn/*"],
+        mode: "compileOnly"
       }
     ],
   ],

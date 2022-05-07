@@ -1,16 +1,16 @@
 import { StyleSheet, Text, View } from 'react-native'
-import { RNComponent } from "rn/RNComponent";
-import DOMComponent from 'web/DOMComponent'
+import { TailwindProvider, styled } from 'tailwindcss-react-native';
+
+const StyledText = styled(Text);
 
 export default function App(props) {
   return (
-    <View style={styles.container}>
-      <Text className="pb-4 font-bold">RN Text</Text>
-      <div className='font-bold'>div</div>
-      <DOMComponent />
-      <RNComponent className="font-bold" />
-    </View>
-  )
+    <TailwindProvider platform="web">
+      <View style={styles.container}>
+        <StyledText className="pb-4 font-bold">RN Text</StyledText>
+      </View>
+    </TailwindProvider>
+  );
 }
 
 const styles = StyleSheet.create({
